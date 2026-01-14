@@ -1,4 +1,4 @@
-# Case 1: Cursor + Claude as an Engineering Cognition Layer
+# Case 1: VScode + Claude as an Engineering Cognition Layer
 
 
 ## S — Situation
@@ -64,11 +64,11 @@ This gave us a clean “before” picture.
 
 ---
 
-### Step 2: Decide what Cursor was and was not
+### Step 2: Decide what VScode was and was not
 
-We standardized on Cursor as the IDE, but we explicitly decided that Cursor would **not** be a free-form chat toy.
+We standardized on VScode as the IDE, but we explicitly decided that VScode would **not** be a free-form chat toy.
 
-Cursor was treated as:
+VScode was treated as:
 - An interaction surface  
 - Not the source of truth  
 - Not autonomous  
@@ -89,7 +89,7 @@ We ingested:
 - Incident postmortems
 - A domain glossary to prevent semantic drift (e.g., refund vs exchange vs return)
 
-These documents were chunked, embedded, and indexed in a vector store. Cursor queries were routed through this index so responses cited internal sources instead of hallucinating.
+These documents were chunked, embedded, and indexed in a vector store. VScode queries were routed through this index so responses cited internal sources instead of hallucinating.
 
 This step alone eliminated a large amount of confusion in system explanations.
 
@@ -103,7 +103,7 @@ Instead, we shipped **three golden paths**, each with enforced schemas.
 
 #### A) Ticket → Plan → Patch
 
-The engineer selected a Jira ticket and the impacted repo. Cursor produced:
+The engineer selected a Jira ticket and the impacted repo. VScode produced:
 - A short, structured implementation plan
 - Explicit services and modules touched
 - A code diff
@@ -129,7 +129,7 @@ The output had to include:
 
 #### C) Fix this failing CI job
 
-Engineers pasted CI logs and selected relevant files. Cursor returned:
+Engineers pasted CI logs and selected relevant files. VScode returned:
 - A suspected root cause
 - The smallest safe patch
 - Verification steps
