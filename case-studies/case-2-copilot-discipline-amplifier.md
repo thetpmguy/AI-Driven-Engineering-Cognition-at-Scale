@@ -106,13 +106,13 @@ When Copilot-generated code consistently fell short in specific areas, we refine
 
 ## R — Result
 
-The results were more modest than the Cursor-based cognition system — but still meaningful and durable.
+The results were more modest than the VScode-based cognition system — but still meaningful and durable.
 
 Observed outcomes:
 - Test coverage improved materially in high-churn domains
 - PR review comments shifted from “add tests/logs” toward business logic and correctness
 - Engineers reported significantly less time spent on boilerplate
-- PR cycle time improved, though not as dramatically as in the Cursor system
+- PR cycle time improved, though not as dramatically as in the VScode system
 - Regression incidents related to missing instrumentation decreased
 
 The most important insight was clear:
